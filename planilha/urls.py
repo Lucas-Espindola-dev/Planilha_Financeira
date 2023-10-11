@@ -13,5 +13,5 @@ urlpatterns = [
     path('receitas/<int:mes>/<int:ano>', ReceitaMesAnoViewSet.as_view({'get': 'list'})),
     path('despesas/<int:mes>/<int:ano>', ReceitaMesAnoViewSet.as_view({'get': 'list'})),
     path('resumo/<int:mes>/<int:ano>', ResumoMesViewSet.as_view()),
-    path('registro', RegistraUsuarioView.as_view()),
+    path('registro/', RegistraUsuarioView.as_view()),
 ]
