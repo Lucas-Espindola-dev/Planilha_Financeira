@@ -1,11 +1,11 @@
 from django.db.models import Sum
-from rest_framework import viewsets
 from planilha.models import Receita, Despesa
-from planilha.serializer import DespesaSerializer, ReceitaSerializer
+from planilha.serializer import DespesaSerializer, ReceitaSerializer, RegistraSerializer
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import filters
+from rest_framework import filters, viewsets, generics
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.permissions import AllowAny
 
 
 class DespesaViewSet(viewsets.ModelViewSet):
@@ -69,3 +69,8 @@ class ResumoMesViewSet(APIView):
             'Categoria/Mês': despesa_por_categoria,
             'Saldo Final/Mês': saldo_final,
         })
+
+
+class RegistraUsuarioView(generics.CreateAPIView):
+    permission_classes = (AllowAny,)
+    serializer_class = RegistraSerializer
