@@ -3,11 +3,9 @@
 
 # Sobre o projeto
 
+Planilha Financeira é uma API construída com Python(Django) idealizada pelo segundo desafio Back-End da escola de Progamadores Alura. 
 
-
-Big Game Survey é uma aplicação full stack web e mobile construída durante a 1ª edição da **Semana DevSuperior** (#sds1), evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
-
-A aplicação consiste em uma pesquisa de preferência de games, onde os dados são coletados no app mobile, e depois são listados no app web, que também apresenta um dashboard com gráficos baseados nestes dados.
+A Aplicação consiste na construção de uma API que retorne os dados de Receitas e Despesas cadastrados no Banco de Dados e que também possua a utilidade de construir resumos e balanços dos meses e anos cadastrados.
 
 ## Layout mobile
 ![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
