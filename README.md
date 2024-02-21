@@ -12,7 +12,6 @@ A Aplicação consiste na construção de uma API que retorne os dados de Receit
 - Python3
 - Django
 - Django Rest Framework
-- 
 
 ## Implantação em produção
 - Banco de dados: Sqlite3
@@ -21,6 +20,12 @@ A Aplicação consiste na construção de uma API que retorne os dados de Receit
 
 ## Back end
 Pré-requisitos: Python3
+
+### Funcionalidades
+- Receitas
+- Despesas
+- Resumo
+- Registro de Usuários
 
 ```bash
 # clonar repositório
