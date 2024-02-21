@@ -51,9 +51,9 @@ class ResumoMesViewSet(APIView):
     queryset = Receita.objects.none()
 
     def get(self, request, ano, mes):
-        valor_total_receitas = not Receita.objects.filter(data__year=ano, data__month=mes).aggregate(
+        valor_total_receitas = Receita.objects.filter(data__year=ano, data__month=mes).aggregate(
             Sum('valor'))['valor__sum'] or 0
-        valor_total_despesas = not Despesa.objects.filter(data__year=ano, data__month=mes).aggregate(
+        valor_total_despesas = Despesa.objects.filter(data__year=ano, data__month=mes).aggregate(
             Sum('valor'))['valor__sum'] or 0
         despesa_por_categoria = Despesa.objects.filter(data__year=ano, data__month=mes).values(
             'categoria').annotate(Sum('valor'))
